@@ -41,6 +41,11 @@ class ScrollingActivity : AppCompatActivity() {
             val intent = Intent(applicationContext, DeviceInfoActivity::class.java)
             startActivity(intent)
         }
+        val butmd2 = binding.root.findViewById<View>(com.jpb.scratchtappy.md3.R.id.button35) as Button
+        butmd2.setOnClickListener {
+            val intent = Intent(applicationContext, mdcomp::class.java)
+            startActivity(intent)
+        }
         val butjpb = binding.root.findViewById<View>(com.jpb.scratchtappy.md3.R.id.button4) as Button
         butjpb.setOnClickListener {
             // initializing object for custom chrome tabs.
