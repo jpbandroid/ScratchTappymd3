@@ -94,7 +94,7 @@
                     style="@style/Widget.MaterialComponents.TextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="•    Adds an APK Info area, where you can find out the ST md3 APK file details!\n•    Updates Material libraries to v1.6.0-alpha01\n•    Makes Tappy+ FAB round again!\n•    Adds extra device information to the Device Info Area, and fixes a few bugs there" />
+                    android:text="@string/changelogtext" />
             </LinearLayout>
 
         </com.google.android.material.card.MaterialCardView>
