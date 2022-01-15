@@ -101,7 +101,7 @@ class PlatLogoActivity : Activity() {
     private fun createDrawable(): Drawable? {
         var color = -1
         try {
-            color = this.getSystemColor("system_accent3_500")
+            color = R.color.purple_500
         } catch (ignore: Exception) {
         }
         if (color != -1) {

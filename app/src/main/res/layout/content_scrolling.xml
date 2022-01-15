@@ -65,7 +65,7 @@
                     android:drawableLeft="@drawable/ic_material_design"
                     android:focusable="true"
                     android:text="MD Components"
-                    app:icon="@drawable/ic_baseline_android_24" />
+                    app:icon="@drawable/ic_material_design" />
 
             </LinearLayout>
 
