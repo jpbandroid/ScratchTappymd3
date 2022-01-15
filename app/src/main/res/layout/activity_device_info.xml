@@ -82,7 +82,7 @@
                             android:id="@+id/textView26"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="DP3" />
+                            android:text="Stable" />
 
                     </LinearLayout>
 

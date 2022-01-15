@@ -31,7 +31,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:max="1000"
-                        android:progress="600"
+                        android:progress="564"
                         android:progressTint="#F44336" />
 
                     <ProgressBar
@@ -49,7 +49,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:max="1000"
-                        android:progress="53"
+                        android:progress="51"
                         android:progressTint="#9C27B0" />
 
                     <ProgressBar
@@ -58,7 +58,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:max="1000"
-                        android:progress="37"
+                        android:progress="36"
                         android:progressTint="#673AB7" />
 
                     <ProgressBar
@@ -67,7 +67,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:max="1000"
-                        android:progress="29"
+                        android:progress="28"
                         android:progressTint="#3F51B5" />
 
                     <ProgressBar
@@ -139,7 +139,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:max="1000"
-                        android:progress="76"
+                        android:progress="72"
                         android:progressTint="#FFEB3B" />
 
                     <ProgressBar
@@ -148,7 +148,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:max="1000"
-                        android:progress="37"
+                        android:progress="77"
                         android:progressTint="#FFC107" />
                 </LinearLayout>
             </HorizontalScrollView>
@@ -181,7 +181,7 @@
                         android:id="@+id/textView6"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="3.9 MB    60% of APK size" />
+                        android:text="3.9 MB    56.4% of APK size" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -214,7 +214,7 @@
                         android:id="@+id/textView8"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="978.8 KB    14.6% of APK size" />
+                        android:text="1017.8 KB    14.6% of APK size" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -247,7 +247,7 @@
                         android:id="@+id/textView9"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="357.1 KB    5.3% of APK size" />
+                        android:text="357.1 KB    5.1% of APK size" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -280,7 +280,7 @@
                         android:id="@+id/textView11"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="219.2 KB    3.3% of APK size" />
+                        android:text="357.1 KB    3.6% of APK size" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -313,7 +313,7 @@
                         android:id="@+id/textView13"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="195.3 KB    2.9% of APK size" />
+                        android:text="197.7 KB    2.8% of APK size" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -346,7 +346,7 @@
                         android:id="@+id/textView16"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="87.1 KB    1.3% of APK size" />
+                        android:text="91.8 KB    1.3% of APK size" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -379,7 +379,7 @@
                         android:id="@+id/textView18"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="43.1 KB    0.6% of APK size" />
+                        android:text="43.3 KB    0.6% of APK size" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -412,7 +412,7 @@
                         android:id="@+id/textView22"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="14.2 KB    0.2% of APK size" />
+                        android:text="14.3 KB    0.2% of APK size" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -576,7 +576,7 @@
                         android:id="@+id/textView30"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="506.5 KB    7.6% of APK size" />
+                        android:text="506.5 KB    7.2% of APK size" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -609,7 +609,7 @@
                         android:id="@+id/textView32"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="244.8 KB    3.7% of APK size" />
+                        android:text="537.2 KB    7.7% of APK size" />
                 </LinearLayout>
 
             </LinearLayout>
