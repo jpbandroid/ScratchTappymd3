@@ -55,8 +55,8 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.0'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0'
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.4.0-beta02'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.4.0-beta02'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.4.0-rc01'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.4.0-rc01'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4-alpha03'
@@ -67,18 +67,18 @@ dependencies {
     implementation 'com.afollestad.material-dialogs:color:3.3.0'
     implementation 'com.afollestad.material-dialogs:bottomsheets:3.3.0'
     implementation 'com.cuneytayyildiz:onboarder:2.0.0'
-    implementation 'androidx.preference:preference:1.2.0-beta01'
-    implementation 'androidx.preference:preference-ktx:1.2.0-beta01'
+    implementation 'androidx.preference:preference:1.2.0-rc01'
+    implementation 'androidx.preference:preference-ktx:1.2.0-rc01'
     implementation 'com.github.bumptech.glide:glide:4.12.0'
     implementation 'androidx.browser:browser:1.4.0'
-    implementation 'androidx.room:room-runtime:2.4.0-rc01'
-    implementation 'androidx.room:room-ktx:2.4.0-rc01'
+    implementation 'androidx.room:room-runtime:2.4.0'
+    implementation 'androidx.room:room-ktx:2.4.0'
     def hilt_version = "2.28-alpha"
     implementation 'com.google.dagger:hilt-android:2.40.5'
 
     def hilt_viewmodels = "1.0.0-alpha02"
     implementation "androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03"
-    kapt 'androidx.room:room-compiler:2.4.0-rc01'
+    kapt 'androidx.room:room-compiler:2.4.0'
     kapt "androidx.hilt:hilt-compiler:1.0.0"
     kapt 'com.google.dagger:hilt-android-compiler:2.40.4'
 }
