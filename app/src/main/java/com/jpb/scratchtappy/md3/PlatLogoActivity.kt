@@ -101,10 +101,11 @@ class PlatLogoActivity : Activity() {
     private fun createDrawable(): Drawable? {
         var color = -1
         try {
-            color = R.color.purple_500
+            color = this.getSystemColor("system_accent3_500")
         } catch (ignore: Exception) {
         }
         if (color != -1) {
+            color = R.color.purple_500
             val drawable = ContextCompat.getDrawable(this, R.drawable.s_platlogo_nobg)
             val bg = GradientDrawable()
             bg.shape = GradientDrawable.OVAL
