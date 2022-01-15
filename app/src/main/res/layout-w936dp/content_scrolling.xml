@@ -178,6 +178,16 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Title" />
 
                     <Button
+                        android:id="@+id/button39"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:drawableLeft="@drawable/ic_round_read_more_24"
+                        android:focusable="true"
+                        android:text="See all"
+                        app:icon="@drawable/ic_round_read_more_24" />
+
+                    <Button
                         android:id="@+id/button5"
                         style="@style/Widget.Material3.Button.TextButton"
                         android:layout_width="match_parent"
