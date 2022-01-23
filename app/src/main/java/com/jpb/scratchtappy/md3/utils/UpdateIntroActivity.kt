@@ -55,7 +55,7 @@ class UpdateIntroActivity : OnboarderActivity(), OnboarderPageChangeListener {
                 }
 
                 description {
-                    text = "All the new features and changes in ST md3 " + BuildConfig.VERSION_NAME + "\n" + R.string.changelog
+                    text = "All the new features and changes in ST md3 " + BuildConfig.VERSION_NAME + "\n" + getString(R.string.changelog)
                     textColor = color(R.color.white)
                     multilineCentered = true
                 }
