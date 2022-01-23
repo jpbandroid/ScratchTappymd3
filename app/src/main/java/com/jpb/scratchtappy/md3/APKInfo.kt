@@ -11,6 +11,6 @@ class APKInfo : AppCompatActivity() {
         setContentView(R.layout.activity_apkinfo2)
         val ab: androidx.appcompat.app.ActionBar? = supportActionBar
         ab?.setTitle("APK Info")
-        ab?.setSubtitle("ScratchTappy md3 1.5")
+        ab?.setSubtitle("ScratchTappy md3 2.0")
     }
 }
