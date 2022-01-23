@@ -68,8 +68,8 @@ class DeviceInfoActivity : AppCompatActivity() {
         val versionRelease = Build.VERSION.RELEASE
         val manufacturer = Build.MANUFACTURER
         val codename = Build.DEVICE
-        val totalInternalValue = formatSize(getTotalInternalMemorySize())
-        val freeInternalValue = formatSize(getAvailableInternalMemorySize())
+        val totalInternalValue = "sorry, not available yet"
+        val freeInternalValue = "sorry, not available yet"
         //to add to textview
         val textView = findViewById<TextView>(R.id.textView40)
         textView.text = deviceName
