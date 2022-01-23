@@ -68,8 +68,8 @@ class DeviceInfoActivity : AppCompatActivity() {
         val versionRelease = Build.VERSION.RELEASE
         val manufacturer = Build.MANUFACTURER
         val codename = Build.DEVICE
-        val totalInternalValue = getTotalInternalMemorySize()
-        val freeInternalValue = getAvailableInternalMemorySize()
+        val totalInternalValue = formatSize(getTotalInternalMemorySize())
+        val freeInternalValue = formatSize(getAvailableInternalMemorySize())
         //to add to textview
         val textView = findViewById<TextView>(R.id.textView40)
         textView.text = deviceName
@@ -245,9 +245,9 @@ class DeviceInfoActivity : AppCompatActivity() {
 
         }
         val storagetotaltitle = findViewById<TextView>(R.id.textView51)
-        storagetotaltitle.text = totalInternalValue.toString()
+        storagetotaltitle.text = totalInternalValue
         val storagefreetitle = findViewById<TextView>(R.id.textView52)
-        storagefreetitle.text = "Free storage: " + freeInternalValue.toString()
+        storagefreetitle.text = "Free storage:\n" + freeInternalValue
     }
     private fun getAvailableInternalMemorySize(): Long {
         val path = Environment.getDataDirectory()
