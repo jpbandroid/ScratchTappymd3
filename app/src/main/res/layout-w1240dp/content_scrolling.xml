@@ -198,7 +198,7 @@
                     style="@style/Widget.Material3.Button.TextButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Material Design library\nversion 1.6.0 alpha 1\nGoogle"
+                    android:text="@string/materialversion"
                     android:textAlignment="viewStart"
                     app:icon="@drawable/ic_material_design"
                     app:iconSize="48dp" />
