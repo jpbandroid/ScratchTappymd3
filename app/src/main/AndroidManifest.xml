@@ -78,10 +78,10 @@
         </service>
         <activity
             android:name=".utils.UpdateIntroActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".utils.IntroActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".NavActivity"
             android:exported="true"
