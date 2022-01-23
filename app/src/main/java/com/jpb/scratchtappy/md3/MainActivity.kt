@@ -1,6 +1,7 @@
 package com.jpb.scratchtappy.md3
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
@@ -11,14 +12,18 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import androidx.preference.PreferenceManager
 import com.google.android.material.color.DynamicColors
 import com.jpb.scratchtappy.md3.databinding.ActivityMainBinding
+import com.jpb.scratchtappy.md3.utils.IntroActivity
+import com.jpb.scratchtappy.md3.utils.UpdateIntroActivity
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        checkFirstRun()
         super.onCreate(savedInstanceState)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -53,5 +58,35 @@ class MainActivity : AppCompatActivity() {
             return true
         }
         return false
+    }
+    private fun checkFirstRun() {
+        val PREFS_NAME = "MyPrefsFile"
+        val PREF_VERSION_CODE_KEY = "version_code"
+        val DOESNT_EXIST = -1
+
+        // Get current version code
+        val currentVersionCode: Int = BuildConfig.VERSION_CODE
+
+        // Get saved version code
+        val prefs: SharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
+        val savedVersionCode = prefs.getInt(PREF_VERSION_CODE_KEY, DOESNT_EXIST)
+
+        // Check for first run or upgrade
+        if (currentVersionCode == savedVersionCode) {
+
+            // This is just a normal run
+            return
+        } else if (savedVersionCode == DOESNT_EXIST) {
+            val intent = Intent(applicationContext, IntroActivity::class.java)
+            this.startActivity(intent)
+            // TODO This is a new install (or the user cleared the shared preferences)
+        } else if (currentVersionCode > savedVersionCode) {
+            val intent = Intent(applicationContext, UpdateIntroActivity::class.java)
+            this.startActivity(intent)
+            // TODO This is an upgrade
+        }
+
+        // Update the shared preferences with the current version code
+        prefs.edit().putInt(PREF_VERSION_CODE_KEY, currentVersionCode).apply()
     }
 }
