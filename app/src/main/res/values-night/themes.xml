@@ -12,5 +12,9 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name='android:scrollbarThumbHorizontal'>@drawable/afs_md2_thumb</item>
+        <item name='android:scrollbarThumbVertical'>@drawable/afs_md2_thumb</item>
+        <item name='android:scrollbarTrackHorizontal'>@drawable/afs_md2_track</item>
+        <item name='android:scrollbarTrackVertical'>@drawable/afs_md2_thumb</item>
     </style>
 </resources>
