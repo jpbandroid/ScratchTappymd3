@@ -244,32 +244,5 @@ class DeviceInfoActivity : AppCompatActivity() {
         butandroid.setOnClickListener {
 
         }
-        val storagetotaltitle = findViewById<TextView>(R.id.textView51)
-        storagetotaltitle.text = "Storage (total)"
-        val storagefreetitle = findViewById<TextView>(R.id.textView52)
-        storagefreetitle.text = "Free storage:\n"
-    }
-    private fun getAvailableInternalMemorySize(): Long {
-        val path = Environment.getDataDirectory()
-        val stat = StatFs(path.path)
-        val blockSize = stat.blockSizeLong
-        val availableBlocks = stat.availableBlocksLong
-        return availableBlocks * blockSize
-    }
-
-    private fun getTotalInternalMemorySize(): Long {
-        val path = Environment.getDataDirectory()
-        val stat = StatFs(path.path)
-        val blockSize = stat.blockSizeLong
-        val totalBlocks = stat.blockCountLong
-        return totalBlocks * blockSize
-    }
-
-    private fun formatSize(size: Long): String {
-        if (size <= 0)
-            return "0"
-        val units = arrayOf("B", "KB", "MB", "GB", "TB")
-        val digitGroups = (Math.log10(size.toDouble()) / Math.log10(1024.0)).toInt()
-        return DecimalFormat("#,##0.#").format(size / Math.pow(1024.0, digitGroups.toDouble())) + " " + units[digitGroups]
     }
 }
