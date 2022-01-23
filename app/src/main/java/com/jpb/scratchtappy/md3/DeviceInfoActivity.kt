@@ -1,5 +1,6 @@
 package com.jpb.scratchtappy.md3
 
+import android.annotation.TargetApi
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.app.ActivityManager
@@ -11,6 +12,8 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import android.content.Context;
+import android.os.Environment
+import android.os.StatFs
 import com.google.android.material.color.DynamicColors
 import com.jaredrummler.android.device.DeviceName
 import android.util.DisplayMetrics
@@ -65,6 +68,8 @@ class DeviceInfoActivity : AppCompatActivity() {
         val versionRelease = Build.VERSION.RELEASE
         val manufacturer = Build.MANUFACTURER
         val codename = Build.DEVICE
+        val totalInternalValue = getTotalInternalMemorySize()
+        val freeInternalValue = getAvailableInternalMemorySize()
         //to add to textview
         val textView = findViewById<TextView>(R.id.textView40)
         textView.text = deviceName
@@ -234,5 +239,37 @@ class DeviceInfoActivity : AppCompatActivity() {
         scrntextorient.text = orient
         val scrnsmlwidth = findViewById<TextView>(R.id.textView105)
         scrnsmlwidth.text = "Smallest screen width: " + config.smallestScreenWidthDp + "dp"
+        val butandroid = findViewById<View>(R.id.button40) as Button
+        butandroid.text = "Fingerprint\n" + Build.FINGERPRINT
+        butandroid.setOnClickListener {
+
+        }
+        val storagetotaltitle = findViewById<TextView>(R.id.textView51)
+        storagetotaltitle.text = totalInternalValue.toString()
+        val storagefreetitle = findViewById<TextView>(R.id.textView52)
+        storagefreetitle.text = "Free storage: " + freeInternalValue.toString()
+    }
+    private fun getAvailableInternalMemorySize(): Long {
+        val path = Environment.getDataDirectory()
+        val stat = StatFs(path.path)
+        val blockSize = stat.blockSizeLong
+        val availableBlocks = stat.availableBlocksLong
+        return availableBlocks * blockSize
+    }
+
+    private fun getTotalInternalMemorySize(): Long {
+        val path = Environment.getDataDirectory()
+        val stat = StatFs(path.path)
+        val blockSize = stat.blockSizeLong
+        val totalBlocks = stat.blockCountLong
+        return totalBlocks * blockSize
+    }
+
+    private fun formatSize(size: Long): String {
+        if (size <= 0)
+            return "0"
+        val units = arrayOf("B", "KB", "MB", "GB", "TB")
+        val digitGroups = (Math.log10(size.toDouble()) / Math.log10(1024.0)).toInt()
+        return DecimalFormat("#,##0.#").format(size / Math.pow(1024.0, digitGroups.toDouble())) + " " + units[digitGroups]
     }
 }

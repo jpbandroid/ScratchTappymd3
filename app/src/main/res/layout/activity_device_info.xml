@@ -30,7 +30,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:paddingTop="24dp">
@@ -188,7 +188,7 @@
 
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/update"
+                        android:id="@+id/update7"
                         android:layout_width="184dp"
                         android:layout_height="wrap_content"
                         app:cardCornerRadius="20dp"
@@ -205,13 +205,13 @@
                                 android:orientation="horizontal">
 
                                 <ImageView
-                                    android:id="@+id/imageView6"
+                                    android:id="@+id/imageView60"
                                     android:layout_width="48dp"
                                     android:layout_height="48dp"
                                     app:srcCompat="@drawable/ic_cpu_32_bit" />
 
                                 <ImageView
-                                    android:id="@+id/imageView"
+                                    android:id="@+id/imageView11"
                                     android:layout_width="48dp"
                                     android:layout_height="48dp"
                                     app:srcCompat="@drawable/ic_cpu_64_bit" />
@@ -406,6 +406,59 @@
                         </LinearLayout>
 
                     </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/update"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cardCornerRadius="20dp"
+                        app:contentPadding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/imageView6"
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
+                                    app:srcCompat="@drawable/ic_round_storage_24" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/textView49"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Storage"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/textView50"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Total storage::" />
+
+                            <TextView
+                                android:id="@+id/textView51"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="1.0" />
+
+                            <TextView
+                                android:id="@+id/textView52"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Free storage:" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
                 </LinearLayout>
             </HorizontalScrollView>
 
@@ -437,6 +490,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/device_board_n" />
+
+            <Button
+                android:id="@+id/button40"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/device_model_n" />
 
         </LinearLayout>
 
