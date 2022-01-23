@@ -245,9 +245,9 @@ class DeviceInfoActivity : AppCompatActivity() {
 
         }
         val storagetotaltitle = findViewById<TextView>(R.id.textView51)
-        storagetotaltitle.text = totalInternalValue
+        storagetotaltitle.text = "Storage (total)"
         val storagefreetitle = findViewById<TextView>(R.id.textView52)
-        storagefreetitle.text = "Free storage:\n" + freeInternalValue
+        storagefreetitle.text = "Free storage:\n"
     }
     private fun getAvailableInternalMemorySize(): Long {
         val path = Environment.getDataDirectory()
