@@ -76,7 +76,12 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </service>
-
+        <activity
+            android:name=".utils.UpdateIntroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".utils.IntroActivity"
+            android:exported="false" />
         <activity
             android:name=".NavActivity"
             android:exported="true"
