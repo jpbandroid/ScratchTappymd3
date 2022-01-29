@@ -20,7 +20,6 @@ import android.util.DisplayMetrics
 import java.text.DecimalFormat
 import com.jpb.scratchtappy.md3.utils.DiskUtils
 
-
 class DeviceInfoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         DynamicColors.applyIfAvailable(this);

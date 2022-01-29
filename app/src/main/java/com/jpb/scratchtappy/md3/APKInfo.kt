@@ -8,7 +8,6 @@ import com.github.mikephil.charting.data.PieDataSet
 import com.github.mikephil.charting.data.PieEntry
 import com.google.android.material.color.DynamicColors
 
-
 class APKInfo : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,6 +34,5 @@ class APKInfo : AppCompatActivity() {
         val data = PieData(set)
         chart.setData(data)
         chart.invalidate() // refresh
-
     }
 }
