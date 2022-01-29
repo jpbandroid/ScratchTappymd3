@@ -11,6 +11,7 @@ import android.view.MenuItem
 import com.jpb.scratchtappy.md3.ui.main.SectionsPagerAdapter
 import com.jpb.scratchtappy.md3.databinding.ActivityMdcomponentBinding
 
+@Deprecated(message = "Replaced with mdcomp.kt since ST md3 1.5", level = DeprecationLevel.WARNING)
 class MDComponent : AppCompatActivity() {
 
     private lateinit var binding: ActivityMdcomponentBinding

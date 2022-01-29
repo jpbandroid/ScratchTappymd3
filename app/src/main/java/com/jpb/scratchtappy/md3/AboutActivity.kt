@@ -7,6 +7,7 @@ import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import com.jpb.scratchtappy.md3.databinding.ActivityAboutBinding
 
+@Deprecated(message = "Old AboutActivity. Deprecated since dev builds of ST md3 1.1.", replaceWith = ReplaceWith("com.jpb.scratchtappy.md3.ScrollingActivity"))
 class AboutActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityAboutBinding

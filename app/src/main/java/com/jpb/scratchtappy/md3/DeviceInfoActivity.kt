@@ -11,13 +11,14 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import androidx.cardview.widget.CardView
-import android.content.Context;
+import android.content.Context
 import android.os.Environment
 import android.os.StatFs
 import com.google.android.material.color.DynamicColors
 import com.jaredrummler.android.device.DeviceName
 import android.util.DisplayMetrics
 import java.text.DecimalFormat
+import com.jpb.scratchtappy.md3.utils.DiskUtils
 
 
 class DeviceInfoActivity : AppCompatActivity() {
@@ -36,9 +37,6 @@ class DeviceInfoActivity : AppCompatActivity() {
         val availableMegs: Long = mi.availMem / 0x100000L
         val config: Configuration = this.getResources().getConfiguration()
 
-//Percentage can be calculated for API 16+
-
-//Percentage can be calculated for API 16+
         val percentAvail: Double = mi.availMem / mi.totalMem.toDouble() * 100.0
         val memtext = findViewById<TextView>(R.id.textView3)
         memtext.text = availableMegs.toString() + " MB"
@@ -244,5 +242,33 @@ class DeviceInfoActivity : AppCompatActivity() {
         butandroid.setOnClickListener {
 
         }
+        val storagetotaltitle = findViewById<TextView>(R.id.textView51)
+        storagetotaltitle.text = DiskUtils.totalSpace(external = false).toString()
+        val storagefreetitle = findViewById<TextView>(R.id.textView52)
+        storagefreetitle.text = "Free storage:\n" + DiskUtils.freeSpace(external = false)
+    }
+    @Deprecated(message = "Deprecated since ST md3 2.0 Enhanced.", replaceWith = ReplaceWith(expression = "com.jpb.scratchtappy.md3.DiskUtils") , level = DeprecationLevel.WARNING)
+    fun getAvailableInternalMemorySize(): Long {
+        val path = Environment.getDataDirectory()
+        val stat = StatFs(path.path)
+        val blockSize = stat.blockSizeLong
+        val availableBlocks = stat.availableBlocksLong
+        return availableBlocks * blockSize
+    }
+    @Deprecated(message = "Deprecated since ST md3 2.0 Enhanced.", level = DeprecationLevel.WARNING)
+    fun getTotalInternalMemorySize(): Long {
+        val path = Environment.getDataDirectory()
+        val stat = StatFs(path.path)
+        val blockSize = stat.blockSizeLong
+        val totalBlocks = stat.blockCountLong
+        return totalBlocks * blockSize
+    }
+    @Deprecated(message = "Deprecated since ST md3 2.0 Enhanced.", level = DeprecationLevel.WARNING)
+    fun formatSize(size: Long): String {
+        if (size <= 0)
+            return "0"
+        val units = arrayOf("B", "KB", "MB", "GB", "TB")
+        val digitGroups = (Math.log10(size.toDouble()) / Math.log10(1024.0)).toInt()
+        return DecimalFormat("#,##0.#").format(size / Math.pow(1024.0, digitGroups.toDouble()))
     }
 }
