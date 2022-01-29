@@ -243,9 +243,9 @@ class DeviceInfoActivity : AppCompatActivity() {
 
         }
         val storagetotaltitle = findViewById<TextView>(R.id.textView51)
-        storagetotaltitle.text = DiskUtils.totalSpace(external = false).toString()
+        storagetotaltitle.text = DiskUtils.totalSpace(external = false).toString() + " MB"
         val storagefreetitle = findViewById<TextView>(R.id.textView52)
-        storagefreetitle.text = "Free storage:\n" + DiskUtils.freeSpace(external = false)
+        storagefreetitle.text = "Free storage:\n" + DiskUtils.freeSpace(external = false).toString() + " MB"
     }
     @Deprecated(message = "Deprecated since ST md3 2.0 Enhanced.", replaceWith = ReplaceWith(expression = "com.jpb.scratchtappy.md3.DiskUtils") , level = DeprecationLevel.WARNING)
     fun getAvailableInternalMemorySize(): Long {
