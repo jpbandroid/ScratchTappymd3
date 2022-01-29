@@ -12,7 +12,7 @@ android {
         applicationId "com.jpb.scratchtappy.md3"
         minSdk 22
         targetSdk 32
-        versionCode 2000
+        versionCode 2010
         versionName "2.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
