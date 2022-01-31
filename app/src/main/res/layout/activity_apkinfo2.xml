@@ -41,6 +41,14 @@
                 </LinearLayout>
             </HorizontalScrollView>
 
+            <TextView
+                android:id="@+id/textView53"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/comfortaa_bold"
+                android:text="Line Chart"
+                android:textSize="24sp" />
+
             <HorizontalScrollView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
@@ -50,21 +58,13 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/textView53"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/comfortaa_bold"
-                        android:text="Line Chart"
-                        android:textSize="24sp" />
-
                     <ProgressBar
                         android:id="@+id/progressBar"
                         style="?android:attr/progressBarStyleHorizontal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:max="1000"
-                        android:progress="562"
+                        android:progress="545"
                         android:progressTint="#F44336" />
 
                     <ProgressBar
@@ -73,7 +73,7 @@
                         android:layout_width="1000dp"
                         android:layout_height="wrap_content"
                         android:max="1000"
-                        android:progress="147"
+                        android:progress="144"
                         android:progressTint="#E91E63" />
 
                     <ProgressBar
@@ -82,7 +82,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:max="1000"
-                        android:progress="51"
+                        android:progress="50"
                         android:progressTint="#9C27B0" />
 
                     <ProgressBar
@@ -184,6 +184,14 @@
                         android:progress="77"
                         android:progressTint="#FFC107" />
 
+                    <ProgressBar
+                        android:id="@+id/progressBar15"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:max="101"
+                        android:progressTint="#FF9800" />
+
                 </LinearLayout>
             </HorizontalScrollView>
 
@@ -215,7 +223,7 @@
                         android:id="@+id/textView6"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="3.9 MB    56.2% of APK size" />
+                        android:text="3.8 MB    54.5% of APK size" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -248,7 +256,7 @@
                         android:id="@+id/textView8"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="1 MB    14.7% of APK size" />
+                        android:text="1 MB    14.4% of APK size" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -281,7 +289,7 @@
                         android:id="@+id/textView9"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="357.1 KB    5.1% of APK size" />
+                        android:text="357.1 KB    5% of APK size" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -644,6 +652,39 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="537.2 KB    7.7% of APK size" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#FF9800"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView33"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="classes11.dex"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/textView34"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="724.6 KB    10.1% of APK size" />
                 </LinearLayout>
 
             </LinearLayout>
