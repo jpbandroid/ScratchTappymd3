@@ -31,8 +31,10 @@ class APKInfo : AppCompatActivity() {
         entries.add(PieEntry(0.2f, "classes3.dex"))
         entries.add(PieEntry(0.1f, "kotlin"))
         entries.add(PieEntry(0.1f, "classes4.dex"))
+        val colors: ArrayList<Int> = ArrayList()
+        for (c in ColorTemplate.MATERIAL_COLORS) colors.add(c)
         val set = PieDataSet(entries, "Composition of the ST md3 " + BuildConfig.VERSION_NAME + " app/apk")
-        set.setColors(ColorTemplate.MATERIAL_COLORS);
+        set.setColors(colors);
         val data = PieData(set)
         chart.setData(data)
         chart.invalidate() // refresh
