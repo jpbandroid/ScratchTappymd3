@@ -18,6 +18,7 @@ import com.jpb.scratchtappy.md3.databinding.ActivityMainBinding
 import com.jpb.scratchtappy.md3.utils.IntroActivity
 import com.jpb.scratchtappy.md3.utils.UpdateIntroActivity
 
+
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
@@ -60,7 +61,6 @@ class MainActivity : AppCompatActivity() {
         return false
     }
     private fun checkFirstRun() {
-        val PREFS_NAME = "MyPrefsFile"
         val PREF_VERSION_CODE_KEY = "version_code"
         val DOESNT_EXIST = -1
 

@@ -6,6 +6,7 @@ import com.github.mikephil.charting.charts.PieChart
 import com.github.mikephil.charting.data.PieData
 import com.github.mikephil.charting.data.PieDataSet
 import com.github.mikephil.charting.data.PieEntry
+import com.github.mikephil.charting.utils.ColorTemplate
 import com.google.android.material.color.DynamicColors
 
 class APKInfo : AppCompatActivity() {
@@ -30,7 +31,8 @@ class APKInfo : AppCompatActivity() {
         entries.add(PieEntry(0.2f, "classes3.dex"))
         entries.add(PieEntry(0.1f, "kotlin"))
         entries.add(PieEntry(0.1f, "classes4.dex"))
-        val set = PieDataSet(entries, "Composition of thge ST md3 " + BuildConfig.VERSION_NAME + " app/apk")
+        val set = PieDataSet(entries, "Composition of the ST md3 " + BuildConfig.VERSION_NAME + " app/apk")
+        set.setColors(ColorTemplate.MATERIAL_COLORS);
         val data = PieData(set)
         chart.setData(data)
         chart.invalidate() // refresh
